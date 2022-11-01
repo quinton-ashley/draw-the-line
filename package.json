@@ -1,0 +1,19 @@
+{
+	"name": "draw-the-line",
+	"title": "Draw the Line",
+	"author": "ZhYGuoL",
+	"contributors": [
+		"quinton-ashley"
+	],
+	"dependencies": {
+		"p5.play": "^3.1.9",
+		"planck": "^1.0.0-alpha.4"
+	},
+	"scripts": {
+		"v": "npm version patch --force",
+		"V": "npm version minor --force",
+		"version": "git add -A",
+		"postversion": "git push"
+	},
+	"version": "1.0.5"
+}
