@@ -41,7 +41,7 @@ function setup() {
 	players.diameter = width * 0.016;
 	players.shapeColor = 200;
 
-	players.collide(obstacles, reset);
+	players.collide(obstacles, resetLevel);
 
 	players.overlap(goals, (player, goal) => {
 		goal.remove();
@@ -82,10 +82,10 @@ function startNewGame() {
 		new obstacles.Sprite(x * width, y * height);
 	}
 
-	reset();
+	resetLevel();
 }
 
-function reset() {
+function resetLevel() {
 	players.remove();
 	lines.remove();
 	nodes.remove();
@@ -114,7 +114,7 @@ function draw() {
 	}
 
 	if (player.y - player.h * 2 > height) {
-		reset();
+		resetLevel();
 	}
 
 	if (mouse.presses('left')) {
